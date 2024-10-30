@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt") apply true
 }
 
 android {
-    namespace = "com.example.lab7"
+    namespace = "com.example.Lab8RobertoNajera"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.lab7"
+        applicationId = "com.example.Lab8RobertoNajera"
         minSdk = 31
         targetSdk = 34
         versionCode = 1
@@ -61,6 +62,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
